@@ -25,7 +25,7 @@ function Pagination({nPages, currentPage, setCurrentPage}) {
         <div>
                 <StyledButton
                 onClick={prevPage} 
-                disable={currentPage===1}>Previous</StyledButton>
+               >Previous</StyledButton>
             {pageNumbers.map(pageNum => (
                 <StyledButton
                     style={{background: currentPage === pageNum ? "rgba(85,19,66,0.18)" : ""}}
