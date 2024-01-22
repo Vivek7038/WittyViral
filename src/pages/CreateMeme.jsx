@@ -60,6 +60,7 @@ function CreateMeme() {
       .then((r) => {
         if (r.success === true) {
           setGeneratedMeme(r.data.url);
+          console.log(r.data)
           setLoading(false);
           setOpen(true);
         } else {
@@ -72,7 +73,12 @@ function CreateMeme() {
         setLoading(false)
       });
   };
-
+  const shareOnTwitter = () => {
+    const tweetText = encodeURIComponent(`Check out this meme!`);
+    const tweetUrl = encodeURIComponent('https://i.imgflip.com/8d5mzo.jpg');
+    const twitterShareLink = `https://twitter.com/intent/tweet?text=${tweetText}&url=${tweetUrl}`;
+    window.open(twitterShareLink,'_blank')
+  };
   return (
     <div className="content" style={{ right: 0, left: 0, margin: "auto" }}>
       <Grid
@@ -109,6 +115,7 @@ function CreateMeme() {
           </TextField>
 
           <InputsForm numOfFields={meme.box_count} changeForm={changeForm} />
+          <Button onClick={()=>shareOnTwitter()}>share</Button>
           <Button variant="outlined" color="secondary" disabled={loading} onClick={generateMeme}>
      Generate
           </Button>
@@ -118,6 +125,7 @@ function CreateMeme() {
               handleClose={handleClose}
               url={generatedMeme}
               open={open}
+              
             />
           ) : (
             <></>
