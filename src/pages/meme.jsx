@@ -37,7 +37,7 @@ function Meme() {
   } else {
     return (
       <div className="">
-        <div>
+        <div className="flex justify-center align-center flex-col">
           <Pagination
             nPages={nPages}
             currentPage={currentPage}

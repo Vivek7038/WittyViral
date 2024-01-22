@@ -22,7 +22,7 @@ function Pagination({nPages, currentPage, setCurrentPage}) {
             setCurrentPage(currentPage - 1)
     };
     return (
-        <div>
+        <div className="flex flex-row justify-center">
                 <StyledButton
                 onClick={prevPage} 
                >Previous</StyledButton>
