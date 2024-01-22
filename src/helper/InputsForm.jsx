@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 
+
 function InputsForm({numOfFields, changeForm}) {
     const fieldsArr = Array.from({length: numOfFields}, (_, index) => index + 1);
 
@@ -16,6 +17,7 @@ function InputsForm({numOfFields, changeForm}) {
                     variant="outlined"
                     fullWidth
                     onInput={changeForm(`boxes[${field-1}][text]`)}
+                    required={true}
                 />
             ))}
         </div>

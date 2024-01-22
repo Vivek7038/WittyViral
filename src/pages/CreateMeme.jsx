@@ -76,7 +76,7 @@ function CreateMeme() {
   const shareOnTwitter = (url) => {
     const tweetText = encodeURIComponent(`Check out this meme! ${url}\n\nMade using https://wittyviral.vercel.app`);
     const tweetUrl = encodeURIComponent(url);
-    const twitterShareLink = `https://twitter.com/intent/tweet?text=${tweetText}&url=${tweetUrl}`;
+    const twitterShareLink = `https://twitter.com/intent/tweet?text=${tweetText}`;
     window.open(twitterShareLink,'_blank')
   };
   return (
