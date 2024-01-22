@@ -5,7 +5,7 @@ import Dialog from "@mui/material/Dialog";
 import React from "react";
 import FileSaver from "file-saver";
 
-function DownloadMeme({handleClose, url, open}) {
+function DownloadMeme({handleClose, url, open,shareOnTwitter}) {
     const saveManual = () => {
         FileSaver.saveAs(url, "meme.jpg");
     };
@@ -16,6 +16,7 @@ function DownloadMeme({handleClose, url, open}) {
             <img src={url} height={350} alt=""/>
             <DialogActions style={{alignSelf:"center"}} >
                 <Button variant="outlined" color="secondary" onClick={saveManual}>Download Meme</Button>
+                <Button variant="outlined" color="secondary" onClick={()=>shareOnTwitter(url)}>Share on Twitter </Button>
             </DialogActions>
         </Dialog>
     );

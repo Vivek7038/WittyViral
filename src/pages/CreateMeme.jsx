@@ -73,9 +73,9 @@ function CreateMeme() {
         setLoading(false)
       });
   };
-  const shareOnTwitter = () => {
-    const tweetText = encodeURIComponent(`Check out this meme!`);
-    const tweetUrl = encodeURIComponent('https://i.imgflip.com/8d5mzo.jpg');
+  const shareOnTwitter = (url) => {
+    const tweetText = encodeURIComponent(`Check out this meme! ${url}\n\nMade using https://wittyviral.vercel.app`);
+    const tweetUrl = encodeURIComponent(url);
     const twitterShareLink = `https://twitter.com/intent/tweet?text=${tweetText}&url=${tweetUrl}`;
     window.open(twitterShareLink,'_blank')
   };
@@ -115,7 +115,6 @@ function CreateMeme() {
           </TextField>
 
           <InputsForm numOfFields={meme.box_count} changeForm={changeForm} />
-          <Button onClick={()=>shareOnTwitter()}>share</Button>
           <Button variant="outlined" color="secondary" disabled={loading} onClick={generateMeme}>
      Generate
           </Button>
@@ -125,7 +124,7 @@ function CreateMeme() {
               handleClose={handleClose}
               url={generatedMeme}
               open={open}
-              
+              shareOnTwitter={shareOnTwitter}
             />
           ) : (
             <></>
