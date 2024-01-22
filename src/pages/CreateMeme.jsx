@@ -10,14 +10,36 @@ import { createMeme } from "../api/api";
 import DownloadMeme from "../helper/DownloadMeme.jsx";
 import CircularProgress from '@mui/material/CircularProgress';
 const fonts = [
-  {
-    value: "impact",
-    label: "impact",
-  },
-  {
-    value: "arial",
-    label: "arial",
-  },
+  { value: "impact", label: "impact" },
+  { value: "arial", label: "arial" },
+  { value: "roboto", label: "roboto" },
+  { value: "lato", label: "lato" },
+  { value: "montserrat", label: "montserrat" },
+  { value: "open sans", label: "open sans" },
+  { value: "playfair display", label: "playfair display" },
+  { value: "raleway", label: "raleway" },
+  { value: "ubuntu", label: "ubuntu" },
+  { value: "oswald", label: "oswald" },
+  { value: "lobster", label: "lobster" },
+  { value: "nunito", label: "nunito" },
+  { value: "merriweather", label: "merriweather" },
+  { value: "poppins", label: "poppins" },
+  { value: "source sans pro", label: "source sans pro" },
+  { value: "dancing script", label: "dancing script" },
+  { value: "noto sans", label: "noto sans" },
+  { value: "quicksand", label: "quicksand" },
+  { value: "arial black", label: "arial black" },
+  { value: "cabin", label: "cabin" },
+  { value: "titillium web", label: "titillium web" },
+  { value: "exo", label: "exo" },
+  { value: "muli", label: "muli" },
+  { value: "architects daughter", label: "architects daughter" },
+  { value: "roboto condensed", label: "roboto condensed" },
+  { value: "cinzel", label: "cinzel" },
+  { value: "chivo", label: "chivo" },
+  { value: "arvo", label: "arvo" },
+  { value: "patua one", label: "patua one" },
+  { value: "rubik", label: "rubik" },
 ];
 
 function CreateMeme() {
